@@ -22,7 +22,7 @@ public class Reservation {
 
     // データベースへの登録時にIDを自動採番する
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
 
     // 予約者の名前を保存するフィールド
     private String name;
@@ -39,19 +39,19 @@ public class Reservation {
     // 引数ありコンストラクタ
     // ID・名前・予約日を指定してオブジェクトを生成する
     // 例：new Reservation(1, "山田太郎", "2026-07-20")
-    public Reservation(int id, String name, String date) {
+    public Reservation(Integer id, String name, String date) {
         this.id = id;       // 引数のIDをフィールドに設定
         this.name = name;   // 引数の名前をフィールドに設定
         this.date = date;   // 引数の予約日をフィールドに設定
     }
 
     // IDを取得するメソッド
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
     // IDを設定するメソッド
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
